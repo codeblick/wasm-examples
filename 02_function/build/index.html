@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02 - Function</title>
+</head>
+<body>
+
+<button class="mybutton">Counter 0</button>
+
+<script>
+let counter = 0
+
+document.querySelector('.mybutton').addEventListener('click', function (e) {
+  counter = Module.ccall(
+    'counter', // name of C function
+    null,         // return type
+    ['number'],   // argument types
+    [counter])    // arguments
+
+  e.srcElement.innerHTML = 'Counter: ' + counter
+})
+</script>
+
+<script async type="text/javascript" src="index.js"></script>
+</body>
+</html>
+
