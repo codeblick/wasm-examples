@@ -13,7 +13,7 @@ let counter = 0
 
 document.querySelector('.mybutton').addEventListener('click', function (e) {
   counter = Module.ccall(
-    'myFunction', // name of C function
+    'counter', // name of C function
     null,         // return type
     ['number'],   // argument types
     [counter])    // arguments
